@@ -1,6 +1,6 @@
 {
   "name": "@edwaramaya/react-wyno",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Component library created in react for the implementation of projects.",
   "author": {"email": "edwaramayadiaz@gmail.com", "name": "Edwar Orlando Amaya Diaz", "url": "https://github.com/edwar"},
   "devDependencies": {
