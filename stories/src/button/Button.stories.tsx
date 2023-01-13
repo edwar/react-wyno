@@ -7,26 +7,28 @@ import { Button } from './Button'
 export default {
   title: 'Button',
   component: Button,
+  args: {
+    buttonType: 'primary',
+    size: 'default',
+    iconPosition: 'none',
+    shape: 'rectangular'
+  },
   argTypes: {
     buttonType: {
       control: 'select',
       options: ['primary', 'outline', 'text', 'danger'],
-      defaultValue: 'primary'
     },
     size: {
       control: 'select',
       options: ['default', 'large', 'small'],
-      defaultValue: 'default'
     },
     iconPosition: {
       control: 'select',
-      options: ['none', 'leading', 'tailing'],
-      defaultValue: 'none'
+      options: ['none', 'leading', 'tailing']
     },
     shape: {
       control: 'select',
-      options: ['rectangular', 'semi-rounded', 'rounded'],
-      defaultValue: 'rectangular'
+      options: ['rectangular', 'semi-rounded', 'rounded']
     }
   }
 } as ComponentMeta<typeof Button>

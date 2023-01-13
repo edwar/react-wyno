@@ -1,8 +1,12 @@
 {
   "name": "@edwaramaya/react-wyno",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Component library created in react for the implementation of projects.",
-  "author": {"email": "edwaramayadiaz@gmail.com", "name": "Edwar Orlando Amaya Diaz", "url": "https://github.com/edwar"},
+  "author": {
+    "email": "edwaramayadiaz@gmail.com",
+    "name": "Edwar Orlando Amaya Diaz",
+    "url": "https://github.com/edwar"
+  },
   "devDependencies": {
     "@babel/core": "7.20.12",
     "@rollup/plugin-babel": "6.0.3",
@@ -17,12 +21,13 @@
     "@storybook/react": "6.5.15",
     "@storybook/testing-library": "0.0.13",
     "@types/react": "18.0.26",
-    "@typescript-eslint/eslint-plugin": "^5.48.1",
-    "@typescript-eslint/parser": "^5.48.1",
+    "@types/styled-components": "^5.1.26",
+    "@typescript-eslint/eslint-plugin": "5.48.1",
+    "@typescript-eslint/parser": "5.48.1",
     "babel-loader": "8.3.0",
     "css-loader": "6.7.3",
     "eslint": "8.31.0",
-    "eslint-plugin-react": "^7.32.0",
+    "eslint-plugin-react": "7.32.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "rollup": "3.9.1",
@@ -42,6 +47,7 @@
     "buildLib": "rollup -c"
   },
   "dependencies": {
-    "react-icons": "4.7.1"
+    "react-icons": "4.7.1",
+    "styled-components": "^5.3.6"
   }
 }
