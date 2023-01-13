@@ -1,0 +1,80 @@
+@charset "utf-8";
+@import '../index.scss';
+
+.input {
+    font-family: $Nunito, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    &--label {
+        font-weight: 500;
+        line-height: 1.2;
+
+        &__error {
+            color: #f51e1e;
+        }
+    }
+
+    &--description {
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-weight: 100;
+        color:#333;
+        font-size: 12px;
+        line-height: 1;
+    }
+
+    &--content {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0.5rem;
+        align-items: center;
+        border: 1px solid #333;
+        box-sizing: border-box;
+        
+        &__input {
+            width: 100%;
+            border-style: hidden;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        &__error {
+            color: #f51e1e;
+            border-style: solid;
+            border-color: #f51e1e;
+        }
+    }
+
+    &--radius {
+        border-radius: 6px;
+    }
+        
+    &--small {
+        font-size: 12px;
+        padding: 6px 4px;
+    }
+
+    &--default {
+        font-size: 14px;
+        padding: 8px 8px;
+    }
+
+    &--large {
+        font-size: 16px;
+        padding: 12px 12px;
+    }
+
+    &--error {
+        font-size: 11px;
+        font-weight: 300;
+        color: #f51e1e;
+    }
+}
