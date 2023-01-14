@@ -100,3 +100,10 @@ export interface ShapeProps {
   radiusLast: string;
   spinParams: string;
 }
+
+export interface IconProps {
+  name: string,
+  color: string,
+  size: number,
+  strokeWidth: number
+}
