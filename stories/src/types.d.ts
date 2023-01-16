@@ -1,13 +1,12 @@
-import { HTMLAttributes } from 'react'
 export interface ButtonProps {
   /**
    * Is this the principal call to action on the page?
    */
-  buttonType?: 'primary' | 'outline' | 'text' | 'danger';
+  buttonType?: 'primary' | 'outline' | 'text' | 'danger'
   /**
    * How large should the button be?
    */
-  size?: 'default' | 'large' | 'small';
+  size?: 'default' | 'large' | 'small'
   /**
    * What is the position of the icon on the button?
    */
@@ -23,22 +22,30 @@ export interface ButtonProps {
   /**
    * Is block
    */
-  block: boolean
+  block?: boolean
   /**
    * Button contents
    */
-  label: string;
+  label: string
+  /**
+   * Background color to button
+   */
+  backgroundColor?: string
+  /**
+   * Color to button
+   */
+  color?: string
   /**
    * Optional click handler
    */
-  onClick?: () => void;
+  onClick?: () => void
 }
 
 export interface InputProps {
 /**
  * How large should the input be?
  */
-size?: 'default' | 'large' | 'small';
+size?: 'default' | 'large' | 'small'
 /**
  * What is the position of the icon on the input?
  */
@@ -50,7 +57,7 @@ icon?: React.ReactElement
   /**
  * Input label
  */
-  label: string;
+  label: string
   /**
   * Input description
   */
@@ -73,7 +80,7 @@ icon?: React.ReactElement
   radius: boolean
 }
 
-export type BlobProps = {
+export interface BlobProps extends HTMLAttributes<HTMLElement> {
   src?: string
   size?: string | number
   /**
@@ -85,25 +92,46 @@ export type BlobProps = {
    */
   timingFunction?: 'ease' | 'linear' | 'ease-in-out'
   /**
-   * Default is undefined, but you could set it to something like '2s'
+   * Default is undefined but you could set it to something like '2s'
    */
-  delay?: string;
+  delay?: string
+  /**
+   * Children
+   */
+  children: string | React.ReactElement
   /**
    * Default is 'infinite'
    */
-  iterationCount?: 'infinite' | number;
-} & HTMLAttributes<HTMLElement>
+  iterationCount?: 'infinite' | number
+}
 
 export interface ShapeProps {
-  size?: string | number;
-  radiusFirst: string;
-  radiusLast: string;
-  spinParams: string;
+  size?: string | number
+  radiusFirst: string
+  radiusLast: string
+  spinParams: string
 }
 
 export interface IconProps {
-  name: string,
-  color: string,
-  size: number,
+  name: string
+  color: string
+  size: number
   strokeWidth: number
+}
+
+export interface SwitchProps {
+  color: string
+  onChange: (boolean)=>void
+  checked: boolean
+  /**
+   * How large should the button be?
+   */
+  size?: 'default' | 'large' | 'small'
+}
+
+export interface TooltipProps {
+  delay: number
+  children: React.ReactElement
+  direction: 'top' | 'right' | 'bottom' | 'left',
+  content: string
 }

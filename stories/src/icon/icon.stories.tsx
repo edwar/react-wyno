@@ -40,7 +40,7 @@ const Template: ComponentStory<typeof Icon> = (args) => <>
 export const Playground = Template.bind({})
 Playground.args = {
   name: 'arrow-down',
-  size: 200,
+  size: 15,
   strokeWidth: 3,
-  color: 'red'
+  color: '#333'
 }

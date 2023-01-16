@@ -15,14 +15,20 @@
     justify-content: space-between;
     gap: 0.3rem;
   }
+  
+  &:hover, :focus {
+    opacity: 0.85;
+    animation: pulse 1s;
+    box-shadow: 0 0 0 .5em transparent;
+  }
+  
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 #ccc; }
+  }
 
   &--primary {
     color: white;
     background-color: #8142F5;
-    &:hover {
-      background-color: #7c3bf5;
-      box-shadow: 2px 3px 6px rgba(93, 95, 99, 0.25);
-    }
   }
 
   &--outline {
@@ -31,7 +37,6 @@
     color: #8142F5;
     &:hover {
       background-color: #f4f1fa;
-      box-shadow: 2px 3px 6px rgba(93, 95, 99, 0.25);
     }
   }
 
@@ -49,7 +54,6 @@
     color: white;
     &:hover {
       background-color: #e64242;
-      box-shadow: 2px 3px 6px rgba(93, 95, 99, 0.25);
     }
   }
 

@@ -11,12 +11,15 @@ export const Button = ({
   shape,
   block,
   label,
+  backgroundColor,
+  color,
   ...props
 }: ButtonProps) => {
   return (
     <button
       type="button"
       className={['button', `button--${size}`, `button--${buttonType}`, `button--${shape}`, block ? 'button--block' : null].join(' ')}
+      style={{backgroundColor, color, borderColor: buttonType==='primary' ? color : '' } }
       {...props}
     >
       <div className='button--content'>
@@ -36,6 +39,8 @@ Button.propTypes = {
   shape: PropTypes.string,
   block: PropTypes.bool,
   label: PropTypes.string.isRequired,
+  backgroundColor: PropTypes.string,
+  color: PropTypes.string,
   onClick: PropTypes.func
 }
 

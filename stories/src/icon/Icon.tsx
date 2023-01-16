@@ -2,10 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { IconProps } from '../types'
 import './icon.scss'
-import { IconData } from './IconsWyno'
+import { iconData } from './iconsWyno'
 
 export const Icon = ({name, color, size, strokeWidth}: IconProps) => {
-  const { d } = IconData.filter(item => item.name === name)[0]
+  const { d } = iconData.filter(item => item.name === name)[0]
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -30,4 +30,9 @@ Icon.propTypes = {
   name: PropTypes.string.isRequired,
   color: PropTypes.string,
   size: PropTypes.number
+}
+
+Icon.default = {
+  color: '#333',
+  size: 15
 }

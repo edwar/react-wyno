@@ -1,4 +1,4 @@
-export const IconData = [
+export const iconData = [
   {
     name: 'arrow-down',
     d: 'm8 64 56 56m0 0 56-56m-56 56V8'
