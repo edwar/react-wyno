@@ -1,8 +1,9 @@
 import React from 'react'
-import { FaBeer } from 'react-icons/fa'
+import { Icon } from '../icon/Icon'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 
 import { Button } from './Button'
+import { Container } from '../container/Container'
 
 export default {
   title: 'Button',
@@ -33,10 +34,12 @@ export default {
   }
 } as ComponentMeta<typeof Button>
 
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />
+const Template: ComponentStory<typeof Button> = (args) => <Container size="md">
+  <Button {...args} />
+</Container>
 
 export const Playground = Template.bind({})
 Playground.args = {
   label: 'Button',
-  icon: <FaBeer />
+  icon: <Icon color='white' name='check' size={15} strokeWidth={15} />
 }

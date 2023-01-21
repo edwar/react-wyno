@@ -3,6 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { useArgs } from '@storybook/client-api'
 
 import { Switch } from './Switch'
+import { Container } from '../container/Container'
 
 export default {
   title: 'Switch',
@@ -23,7 +24,11 @@ export default {
 const Template: ComponentStory<typeof Switch> = (args) => {
   const [, updateArgs] = useArgs()
   const change = (checked: boolean) => updateArgs({ checked })
-  return (<Switch {...args} onChange={change} />)
+  return <Container size='md'>
+    <div style={{ display: 'flex', width: '100%', height: '255px', justifyContent: 'center', alignItems: 'center'}}>
+      <Switch {...args} onChange={change} />
+    </div>
+  </Container>
 }
 
 export const Playground = Template.bind({})

@@ -2,6 +2,8 @@ import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 
 import { Icon } from './Icon'
+import { Container } from '../container/Container'
+import { Card } from '../card/Card'
 
 export default {
   title: 'Icons',
@@ -32,15 +34,18 @@ export default {
   }
 } as ComponentMeta<typeof Icon>
 
-const Template: ComponentStory<typeof Icon> = (args) => <>
-  <Icon {...args} />
-  <div>{args.name}</div>
-</>
+const Template: ComponentStory<typeof Icon> = (args) => <Container size="md">
+  <Card description={args.name}>
+    <div style={{ display: 'flex', justifyContent: 'center'}}>
+      <Icon {...args} />
+    </div>
+  </Card>
+</Container>
 
 export const Playground = Template.bind({})
 Playground.args = {
   name: 'arrow-down',
-  size: 15,
+  size: 50,
   strokeWidth: 3,
   color: '#333'
 }

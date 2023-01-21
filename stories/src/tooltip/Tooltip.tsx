@@ -43,5 +43,5 @@ Tooltip.propTypes = {
 Tooltip.default = {
   delay: 400,
   content: '',
-  direction: 'top'
+  direction: 'bottom'
 }

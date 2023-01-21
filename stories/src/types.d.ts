@@ -114,9 +114,10 @@ export interface ShapeProps {
 
 export interface IconProps {
   name: string
-  color: string
-  size: number
-  strokeWidth: number
+  color?: string
+  size?: number
+  strokeWidth?: number
+  className?: string
 }
 
 export interface SwitchProps {
@@ -130,8 +131,19 @@ export interface SwitchProps {
 }
 
 export interface TooltipProps {
-  delay: number
+  delay?: number
   children: React.ReactElement
-  direction: 'top' | 'right' | 'bottom' | 'left',
+  direction?: 'top' | 'right' | 'bottom' | 'left'
   content: string
+}
+
+export interface CardProps {
+  children: React.ReactElement | string
+  description: React.ReactElement | string
+}
+
+export interface ContainerProps {
+  children?: React.ReactElement,
+  className?: string,
+  size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'full'
 }

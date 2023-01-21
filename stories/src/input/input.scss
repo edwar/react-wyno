@@ -17,14 +17,23 @@
     }
 
     &--description {
-        width: 100%;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        font-weight: 100;
-        color:#333;
+        display: flex;
+        flex-direction: row;
+        gap: 3px;
         font-size: 12px;
-        line-height: 1;
+        &__text {
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-weight: 100;
+            color:#333;
+            line-height: 1;
+        }
+
+        &__icon {
+            cursor: help;
+        }
     }
 
     &--content {

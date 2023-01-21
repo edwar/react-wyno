@@ -2,6 +2,7 @@ import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 
 import { Blob } from './Blob'
+import { Container } from '../container/Container'
 
 export default {
   title: 'Blob',
@@ -17,7 +18,9 @@ export default {
   }
 } as ComponentMeta<typeof Blob>
 
-const Template: ComponentStory<typeof Blob> = (args) => <Blob {...args} />
+const Template: ComponentStory<typeof Blob> = (args) => <Container size="md">
+  <Blob {...args} />
+</Container>
 
 export const Playground = Template.bind({})
 Playground.args = {
@@ -31,9 +34,6 @@ Playground.args = {
     left: '-100px',
     top: '-200px',
     position: 'absolute',
-
-    zIndex: -1,
-    background: '#8142F5',
-    color: 'white'
+    background: '#8142F5'
   }
 }

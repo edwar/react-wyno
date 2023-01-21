@@ -4,7 +4,7 @@ import { IconProps } from '../types'
 import './icon.scss'
 import { iconData } from './iconsWyno'
 
-export const Icon = ({name, color, size, strokeWidth}: IconProps) => {
+export const Icon = ({name, color, size, strokeWidth, className}: IconProps) => {
   const { d } = iconData.filter(item => item.name === name)[0]
   return (
     <svg
@@ -13,6 +13,7 @@ export const Icon = ({name, color, size, strokeWidth}: IconProps) => {
       width={size}
       height={size}
       fill='none'
+      className={className}
     >
       <path fill="none" d="M0 0h128v128H0z" />
       <path
