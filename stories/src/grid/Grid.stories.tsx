@@ -25,7 +25,7 @@ export default {
   }
 } as ComponentMeta<typeof Grid>
 
-const Template: ComponentStory<typeof Grid> = (args) => <Container size="md">
+const Template: ComponentStory<typeof Grid> = (args) => <Container size="lg">
   <div style={{ position: 'relative' }}>
     <GridRuler spacing='sm' {...args} />
     <Grid
