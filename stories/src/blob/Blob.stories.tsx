@@ -7,13 +7,11 @@ import { Container } from '../container/Container'
 export default {
   title: 'Blob',
   component: Blob,
-  args: {
-    buttonType: 'primary'
-  },
+  args: {},
   argTypes: {
-    buttonType: {
+    timingFunction: {
       control: 'select',
-      options: ['primary', 'outline', 'text', 'danger']
+      options: ['ease', 'linear', 'ease-in-out']
     }
   }
 } as ComponentMeta<typeof Blob>
@@ -26,14 +24,11 @@ export const Playground = Template.bind({})
 Playground.args = {
   duration: '50s',
   timingFunction: 'linear',
-  size: '60vw',
-  delay: '',
-  style: {
-    width: '500px',
-    height: '500px',
-    left: '-100px',
-    top: '-200px',
-    position: 'absolute',
-    background: '#8142F5'
-  }
+  size: '500px',
+  delay: '1ms',
+  top: 0,
+  right: 0,
+  bottom: 0,
+  left: 0,
+  background: '#8142F5'
 }

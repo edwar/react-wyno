@@ -1,6 +1,5 @@
 @charset "utf-8";
 @import '../index.scss';
-
 .input {
     font-family: $Nunito, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     position: relative;
@@ -44,7 +43,6 @@
         gap: 0.5rem;
         align-items: center;
         border: 1px solid #333;
-        box-sizing: border-box;
         
         &__input {
             width: 100%;

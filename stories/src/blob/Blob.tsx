@@ -10,16 +10,18 @@ const animation = keyframes`
 `
 
 const Shape = styled.div<ShapeProps>`
+  position: absolute;
   transition: border-radius 1s ease-out;
   transform-origin: center;
   overflow: hidden;
-  ${props =>
-    props.size &&
-    css`
-      width: ${props.size};
-      height: ${props.size};
-    `}
   ${props => css`
+    top: ${props.top ? props.top+'px': null};
+    right: ${props.right ? props.right+'px': null};
+    bottom: ${props.bottom ? props.bottom+'px': null};
+    left: ${props.left ? props.left+'px': null};
+    background-color: ${props.background};
+    width: ${props.size};
+    height: ${props.size};
     border-radius: ${props.radiusFirst};
     animation: ${keyframes`
       0% {
@@ -91,12 +93,15 @@ Blob.propTypes = {
   size: PropTypes.string,
   duration: PropTypes.string,
   timingFunction: PropTypes.string,
-  delay: PropTypes.string,
-  children: PropTypes.element
+  top: PropTypes.number,
+  right: PropTypes.number,
+  bottom: PropTypes.number,
+  left: PropTypes.number,
+  delay: PropTypes.string
 }
 
 Blob.default = {
   duration: '50s',
   timingFunction: 'linear',
-  delay: ''
+  delay: '1ms'
 }

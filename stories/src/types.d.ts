@@ -1,3 +1,5 @@
+import React from 'react'
+
 export interface ButtonProps {
   /**
    * Is this the principal call to action on the page?
@@ -82,6 +84,9 @@ icon?: React.ReactElement
 
 export interface BlobProps extends HTMLAttributes<HTMLElement> {
   src?: string
+  /**
+   * 
+   */
   size?: string | number
   /**
    * Default is '15s'
@@ -103,6 +108,26 @@ export interface BlobProps extends HTMLAttributes<HTMLElement> {
    * Default is 'infinite'
    */
   iterationCount?: 'infinite' | number
+  /**
+   * Top
+   */
+  top?: number
+  /**
+   * Right
+   */
+  right?: number
+  /**
+   * Bottom
+   */
+  bottom?: number
+  /**
+   * Left
+   */
+  left?: number
+  /**
+   * Background
+   */
+  background: string
 }
 
 export interface ShapeProps {
@@ -110,6 +135,23 @@ export interface ShapeProps {
   radiusFirst: string
   radiusLast: string
   spinParams: string
+  background: string
+  /**
+   * Top
+   */
+  top?: number
+  /**
+   * Right
+   */
+  right?: number
+  /**
+   * Bottom
+   */
+  bottom?: number
+  /**
+   * Left
+   */
+  left?: number
 }
 
 export interface IconProps {
@@ -143,7 +185,22 @@ export interface CardProps {
 }
 
 export interface ContainerProps {
-  children?: React.ReactElement,
-  className?: string,
+  children?: React.ReactNode
+  className?: string
   size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'full'
+}
+
+type Cols = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
+type Spacing = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+
+export interface GridProps {
+  children: React.ReactNode
+  container?: boolean
+  item?: boolean
+  cols?: Cols
+  spacing?: Spacing
+}
+
+export interface RulerProps {
+  spacing?: Spacing
 }

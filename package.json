@@ -1,6 +1,6 @@
 {
   "name": "@edwaramaya/react-wyno",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Component library created in react for the implementation of projects.",
   "author": {
     "email": "edwaramayadiaz@gmail.com",
@@ -20,8 +20,9 @@
     "@storybook/preset-scss": "1.0.3",
     "@storybook/react": "6.5.15",
     "@storybook/testing-library": "0.0.13",
+    "@types/classnames": "2.3.1",
     "@types/react": "18.0.26",
-    "@types/styled-components": "^5.1.26",
+    "@types/styled-components": "5.1.26",
     "@typescript-eslint/eslint-plugin": "5.48.1",
     "@typescript-eslint/parser": "5.48.1",
     "babel-loader": "8.3.0",
@@ -47,7 +48,8 @@
     "buildLib": "rollup -c"
   },
   "dependencies": {
-    "framer-motion": "^8.5.0",
-    "styled-components": "^5.3.6"
+    "classnames": "2.3.2",
+    "framer-motion": "8.5.0",
+    "styled-components": "5.3.6"
   }
 }
