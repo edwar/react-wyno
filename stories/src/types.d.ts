@@ -1,4 +1,4 @@
-import React from 'react'
+import { ReactNode, ReactElement} from 'react'
 
 export interface ButtonProps {
   /**
@@ -16,7 +16,7 @@ export interface ButtonProps {
   /**
    * What is the icon
    */
-  icon?: React.ReactElement
+  icon?: ReactElement
   /**
    * What will be the shape of the button?
    */
@@ -44,21 +44,21 @@ export interface ButtonProps {
 }
 
 export interface InputProps {
-/**
- * How large should the input be?
- */
-size?: 'default' | 'large' | 'small'
-/**
- * What is the position of the icon on the input?
- */
-iconPosition?: 'none' | 'leading' | 'tailing'
-/**
- * What is the icon
- */
-icon?: React.ReactElement
   /**
- * Input label
- */
+   * How large should the input be?
+   */
+  size?: 'default' | 'large' | 'small'
+  /**
+   * What is the position of the icon on the input?
+   */
+  iconPosition?: 'none' | 'leading' | 'tailing'
+  /**
+   * What is the icon
+   */
+  icon?: ReactElement
+  /**
+   * Input label
+   */
   label: string
   /**
   * Input description
@@ -103,7 +103,7 @@ export interface BlobProps extends HTMLAttributes<HTMLElement> {
   /**
    * Children
    */
-  children: string | React.ReactElement
+  children: string | ReactNode
   /**
    * Default is 'infinite'
    */
@@ -174,33 +174,44 @@ export interface SwitchProps {
 
 export interface TooltipProps {
   delay?: number
-  children: React.ReactElement
+  children: ReactNode
   direction?: 'top' | 'right' | 'bottom' | 'left'
   content: string
 }
 
 export interface CardProps {
-  children: React.ReactElement | string
-  description: React.ReactElement | string
+  children: ReactNode | string
+  description: ReactNode | string
 }
 
 export interface ContainerProps {
-  children?: React.ReactNode
+  children?: ReactNode
   className?: string
   size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'full'
 }
 
-type Cols = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
-type Spacing = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
-
-export interface GridProps {
-  children: React.ReactNode
-  container?: boolean
-  item?: boolean
-  cols?: Cols
-  spacing?: Spacing
+export interface BoxProds {
+  children: ReactNode
 }
 
-export interface RulerProps {
+type Cols = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
+type Spacing = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+type JustifyContent = 'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-around'
+type AlignItems = 'flex-start' | 'center' | 'flex-end'
+
+export interface GridProps {
+  children: ReactNode
+  container?: boolean
+  item?: boolean
+  xs?: Cols
+  sm?: Cols
+  md?: Cols
+  lg?: Cols
+  spacing?: Spacing
+  justifyContent?: JustifyContent
+  alignItems?: AlignItems
+}
+
+export interface GridRulerProps {
   spacing?: Spacing
 }
